@@ -49,7 +49,8 @@ function getTable(){
 }
 
 function choosePart(e){
-	chosenInfo.partition = $($("#partitions > option")[e.target.value]).html();
+	window.lala = e;
+  	chosenInfo.partition = $($($("#partitions > option"))[1+parseInt(e.target.value)]).text();
 	getTable();
 }
 
